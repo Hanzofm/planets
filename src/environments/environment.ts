@@ -1,9 +1,10 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-
+const base_api_url = 'https://apodapi.herokuapp.com';
 export const environment = {
-  production: false
+  production: false,
+  PLANETS: `${base_api_url}/search/?search_query=planets`,
 };
 
 /*
