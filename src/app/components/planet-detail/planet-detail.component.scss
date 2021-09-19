@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  width: 80vw !important;
+  height: 80vh !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .title {
+    position: absolute;
+    bottom: 1%;
+    left: 1.5%;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5%;
+    font-size: 14px;
+  }
+  .close-button {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    color: white;
+  }
+  .edit-button {
+    position: absolute;
+    top: 3%;
+    right: 6%;
+    color: white;
+  }
+}

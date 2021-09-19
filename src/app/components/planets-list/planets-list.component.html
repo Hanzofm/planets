@@ -1,0 +1,12 @@
+<mat-grid-list cols="1" rowHeight="150px">
+  <mat-grid-tile
+    *ngFor="let planet of planets; let i = index"
+    matRipple
+    [matRippleColor]="'#800080'"
+    [style.background-image]="'url(' + planet.url + ')'"
+    (click)="seeDetails(planet, i)"
+  >
+    <span class="date">{{ planet.date | date: "fullDate" | titlecase }}</span>
+    <p class="title">{{ planet.title }}<br />{{ planet.copyright }}</p>
+  </mat-grid-tile>
+</mat-grid-list>

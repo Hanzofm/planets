@@ -1,0 +1,13 @@
+:host {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  &__button {
+    margin-top: 15%;
+  }
+}

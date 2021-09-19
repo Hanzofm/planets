@@ -1,0 +1,32 @@
+<div
+  class="container"
+  [style.background-image]="
+    'url(' + (!editMode ? planetData.hdurl : 'white') + ')'
+  "
+>
+  <button
+    mat-icon-button
+    [mat-dialog-close]="planetData"
+    class="close-button"
+    *ngIf="!editMode"
+  >
+    <mat-icon>close</mat-icon>
+  </button>
+  <button
+    *ngIf="!editMode"
+    mat-icon-button
+    class="edit-button"
+    (click)="editModeToggle()"
+  >
+    <mat-icon>edit</mat-icon>
+  </button>
+  <p *ngIf="!editMode" class="title">
+    {{ planetData.title }}<br />{{ planetData.copyright }}
+  </p>
+
+  <app-planet-register
+    *ngIf="editMode"
+    [planet]="planetData"
+    (action)="OnEditAction($event)"
+  ></app-planet-register>
+</div>

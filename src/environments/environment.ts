@@ -5,6 +5,7 @@ const base_api_url = 'https://apodapi.herokuapp.com';
 export const environment = {
   production: false,
   PLANETS: `${base_api_url}/search/?search_query=planets`,
+  default_planet_image: 'https://cdn.wallpapersafari.com/89/95/W4vEmq.jpg',
 };
 
 /*

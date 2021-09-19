@@ -1,0 +1,28 @@
+.mat-grid-tile {
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-color: grey !important;
+  .date {
+    position: absolute;
+    top: 5%;
+    right: 0.5%;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.3%;
+    font-size: 12px !important;
+  }
+  .title {
+    position: absolute;
+    bottom: 1%;
+    left: 1.5%;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5%;
+    font-size: 14px;
+  }
+}

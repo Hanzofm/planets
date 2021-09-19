@@ -12,7 +12,7 @@ export class PlanetService {
     private dataSRC: PlanetDataSrcService
   ) {}
 
-  getPlanets(quantity?: number): Observable<any> /* Observable<MotMonth[]> */ {
+  getPlanets(quantity?: number): Observable<any> {
     let params = new HttpParams();
     params = params.set('number', quantity ?? 10);
     return this.http.get(this.dataSRC.planets.list, { params });

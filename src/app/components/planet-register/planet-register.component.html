@@ -1,0 +1,50 @@
+<h1 *ngIf="register" class="page-title">Crear nuevo planeta</h1>
+<h1 *ngIf="!register" class="page-title">
+  Actualizar la información del planeta
+</h1>
+<form [formGroup]="form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Fecha de descubrimiento</mat-label>
+    <input matInput formControlName="date" [(ngModel)]="planetData.date" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Copyright</mat-label>
+    <input
+      matInput
+      formControlName="copyright"
+      [(ngModel)]="planetData.copyright"
+    />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Descripción</mat-label>
+    <input matInput formControlName="title" [(ngModel)]="planetData.title" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Imagen</mat-label>
+    <input matInput formControlName="hdurl" [(ngModel)]="planetData.hdurl" />
+  </mat-form-field>
+</form>
+
+<div class="footer-actions">
+  <button *ngIf="!register" mat-button (click)="cancel()">Cancelar</button>
+  <button *ngIf="register" mat-button [mat-dialog-close]>Cancelar</button>
+
+  <button
+    *ngIf="!register"
+    [disabled]="!form.valid"
+    (click)="save()"
+    mat-button
+    color="primary"
+  >
+    Guardar
+  </button>
+  <button
+    *ngIf="register"
+    [disabled]="!form.valid"
+    [mat-dialog-close]="newPlanet"
+    mat-button
+    color="primary"
+  >
+    Crear
+  </button>
+</div>
